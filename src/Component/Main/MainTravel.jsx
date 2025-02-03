@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 const MainTravel = () => {
     return (
         <>
-            <div>
+           
                 <div className="row  T-1 " dir='rtl'>
                     <div className=" row order-2 T-2 p-3 " >
                         <h1  >ذخیره ایده های سفر خود را شروع کنید</h1>
@@ -14,7 +14,7 @@ const MainTravel = () => {
                     </div>
                 </div>
              
-            </div>
+           
         </>
     );
 }

@@ -1,0 +1,78 @@
+/* پس‌زمینه مینیمال و مدرن */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #f4f4f9; */
+    padding: 20px;
+}
+
+/* باکس فرم */
+.login-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;  /* ⬅ افزایش عرض فرم */
+    text-align: center;
+}
+
+/* عنوان */
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* فیلدهای ورودی */
+.form-group {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    height: 50px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* دکمه ورود */
+
+    .login-btn {
+        width: 100%;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 14px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center; /* متن دکمه را وسط قرار می‌دهد */
+        align-items: center; /* متن را به صورت عمودی وسط قرار می‌دهد */
+        height: 50px; /* ارتفاع را مشخص می‌کند تا متن دقیق وسط باشد */
+    }
+
+
+.login-btn:hover {
+    background: #0056b3;
+}
+
+/* لینک ثبت‌نام */
+.signup-link {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.signup-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

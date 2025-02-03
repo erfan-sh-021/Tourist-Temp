@@ -1,34 +1,152 @@
-@media only screen and (min-width: 0) and (max-width: 375px) {
-.Sliderstyle{
-    max-width: 260px !important;
+.text-infoo {
+    padding: .5rem 1rem;
+    margin-bottom: 2.5rem;
+    min-height: 190px;
 }
-}
-@media only screen and (min-width: 425px) and (max-width: 768px) {
-.Sliderstyle{
-    max-width: 320px !important;
-}
-}
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-.Sliderstyle{
-    width: 310px !important;
-    
-
-}
-}
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
-    .Sliderstyle{
-        width: 330px !important;
-    }
-}
-@media only screen and (min-width: 1441px) and (max-width: 2560px) {
-    .Sliderstyle{
-        width: 300px !important;
-    }
-}
-
 .items{
-    height: 80px;
+    font-size: 12px;
 }
-.c_header{
-    height: 80px;
+
+.text-infoo>ul {
+    padding-left: 0;
+    padding-right: 1rem;
+    list-style: none;
+    color: olivedrab;
 }
+
+.text-infoo>ul>li::before {
+    content: "\2022";
+    color: sandybrown;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: 0em;
+}
+
+.text-infoo>p {
+    padding-top: .5rem;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    color: navy;
+}
+.controls {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1.5rem;
+}
+
+.controls button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: #f9aa33;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+.controls button:hover {
+    background-color: #ec8e00;
+}
+
+.controls button:nth-child(1) {
+    margin-right: 2rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 18rem; /* کاهش سایز کارت */
+    position: relative;
+    border: 1px solid #ccc;
+    margin: 0 20px; /* افزایش فاصله بین کارت‌ها */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header span {
+    font-size: .75rem;
+    width: 4rem;
+}
+
+.card-header>h2 {
+    font-size: 1rem;
+}
+
+.card-image {
+    width: 100%;
+    height: 10rem; /* کاهش ارتفاع کارت */
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.card button {
+    display: inline-block;
+    background-color: #2a4b76;
+    color: #fff;
+    border: none;
+    padding: 1.2em 1.4em;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: inherit;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: background-color 0.5s ease-out;
+}
+
+.card button:focus {
+    outline: none;
+}
+
+.card button:hover {
+    background-color: #355a8b;
+}
+
+@media only screen and (min-width: 0) and (max-width: 375px) {
+    .Sliderstyle {
+      max-width: 180px !important; 
+      margin: 0 12px; 
+    }
+  }
+  
+  @media only screen and (min-width: 425px) and (max-width: 768px) {
+    .Sliderstyle {
+      max-width: 240px !important;
+      margin: 0 16px;
+    }
+  }
+  
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .Sliderstyle {
+      width: 260px !important;
+      margin: 0 18px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .Sliderstyle {
+      width: 280px !important;
+      margin: 0 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 1441px) and (max-width: 2560px) {
+    .Sliderstyle {
+      width: 260px !important;
+      margin: 0 22px;
+    }
+  }
+  
+  /* .items {
+    height: 60px;
+  } */
+  
+  .c_header {
+    height: 60px;
+  }

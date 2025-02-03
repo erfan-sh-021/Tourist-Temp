@@ -17,6 +17,8 @@ export default function Carousel() {
     autoplay: false,
      autoplaySpeed: 2000,
      pauseOnHover: true,
+     centerMode: true,      
+     centerPadding: "20px", 
     responsive: [
       {
         breakpoint: 2561,
@@ -119,7 +121,7 @@ export default function Carousel() {
   ]
 
   return (
-    <div className='container-fluid'>
+    <div className='C-1 container-fluid'>
 
       <Slider ref={setSliderRef} {...sliderSettings}>
         {hotelCards.map((card, index) => (
@@ -141,7 +143,7 @@ export default function Carousel() {
           </div>
         ))}
       </Slider>
-      <div className='controls d-flex justify-content-center my-5'>
+      <div className='C-2 controls d-flex justify-content-center '>
         <button onClick={sliderRef?.slickPrev}>
           <FaChevronLeft />
         </button>

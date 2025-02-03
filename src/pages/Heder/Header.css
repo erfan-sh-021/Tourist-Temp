@@ -1,0 +1,124 @@
+/* استایل کلی هدر */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+
+
+/* دکمه ورود */
+.login-header-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.dark-mode .login-header-btn{
+    background-color: rgb(62, 62, 241);
+    font-weight: bold;
+}
+.dark-mode .login-header-btn:hover{
+    background-color: white;
+    color: rgb(62, 62, 241) !important;
+    font-weight: bold;
+}
+.login-btn:hover {
+    padding: 8px 15px;
+}
+
+
+/* دکمه دارک مود */
+.dark-mode-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* حالت لایت */
+.dark-mode-btn.light {
+    background: linear-gradient(135deg, #333, #555);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode-btn.light:hover {
+    transform: scale(1.1);
+}
+
+/* حالت دارک */
+.dark-mode-btn.dark {
+    background: linear-gradient(135deg, #ffcc33, #ff9933);
+    box-shadow: 0 4px 10px rgba(248, 248, 248, 0.3);
+}
+
+.dark-mode-btn.dark:hover {
+    transform: scale(1.1);
+}
+
+/* تنظیم موقعیت آیکون داخل دکمه */
+.dark-mode-btn svg {
+    width: 24px;
+    height: 24px;
+}
+/* ------------------------ */
+/* استایل‌های پیش‌فرض برای حالت لایت */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* زمانی که دارک مود فعال است */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* تغییر رنگ دکمه‌ها در حالت دارک */
+.dark-mode-btn {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+}
+
+.dark-mode .dark-mode-btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+}
+
+/* تغییر رنگ هدر در حالت دارک */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.dark-mode .navbar {
+    background-color: #222;
+}
+
+/* تغییر رنگ لینک‌ها */
+.navbar ul li {
+    color: black;
+}
+
+.dark-mode .navbar ul li {
+    color: white;
+}
+.logo{
+    position: relative;
+    right: 5%;
+    cursor: pointer;
+}

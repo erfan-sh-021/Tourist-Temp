@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
-import Header from '../Heder/Header';
+import Footer from '../../pages/Footer/Footer';
+import Header from '../../pages/Heder/Header';
 import CardDetails from './CardDetails'
 
 const Data = {
@@ -56,7 +56,7 @@ function Detail() {
 
     return (
         <>
-        <Header />
+            <Header />
             <CardDetails data={Data.products} />
             <Footer />
         </>

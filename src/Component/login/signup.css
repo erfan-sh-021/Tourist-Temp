@@ -1,0 +1,54 @@
+/* استایل کلی فرم */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to right, #6a11cb, #2575fc); */
+}
+
+/* باکس فرم */
+.signup-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* عنوان */
+.signup-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* دکمه ثبت‌نام */
+.signup-btn {
+    background-color: #6a11cb;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center; /* متن دکمه را وسط قرار می‌دهد */
+    align-items: center;
+}
+
+.signup-btn:hover {
+    background-color: #2575fc;
+}
+
+/* لینک ورود */
+.signup-link {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}

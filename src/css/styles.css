@@ -12,137 +12,172 @@
          box-sizing: border-box;
          font-family: myFont;
      }
-     .Nv{
-         background-color: #464b4e ;
+
+     .Nv {
+         /* background-color: #464b4e; */
+         border-bottom: 1px solid #e0e0e0;
+
      }
-     .container1{
-         max-width: 1300px;
+
+     .Nv>ul {
+         display: flex;
+         gap: 20px;
+         font-weight: bold;
          margin: 0 auto;
+         padding: 0;
+         list-style: none;
      }
-     .desc{
-        max-width: 250px;
-        margin: 15px auto;
-        margin-bottom: 60px !important;
+     .Nv>ul>li{
+        margin: 5px;
+        padding: 10px 20px;
      }
-     .Cardd{
+     .Nv>ul>li:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 1.5rem;
+        
+     }
+
+     .container1 {
+         max-width: 1300px;
+         margin: 10rem auto;
+     }
+
+     .desc {
+         max-width: 250px;
+         margin: 15px auto;
+         margin-bottom: 60px !important;
+     }
+
+     .Cardd {
          padding: 1rem;
      }
+
      .login-btn {
-        font-family: Hack, monospace;
-        background: #F9AA33;
-        color: #1d1d1d;
-        cursor: pointer;
-        font-size: 1em;
-        padding: .5rem;
-        border: 0;
-        transition: all 0.5s;
-        border-radius: 10px;
-        width: auto;
-        position: relative;
-        min-width: 106px;
-    }
+         font-family: Hack, monospace;
+         background: #000;
+         color: #fff !important;
+         cursor: pointer;
+         font-size: 1em;
+         padding: .5rem;
+         border: 0;
+         transition: all 0.5s;
+         border-radius: 10px;
+         width: auto;
+         position: relative;
+         min-width: 106px;
+     }
 
 
-    .login-btn::after {
-        content: "\f2f6";
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 400;
-        position: absolute;
-        left: 80%;
-        top: 49%;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-    }
+     .login-btn::after {
+         font-family: "Font Awesome 5 Pro";
+         font-weight: 400;
+         position: absolute;
+         left: 80%;
+         top: 49%;
+         right: 0;
+         bottom: 0;
+         opacity: 0;
+         transform: translate(-50%, -50%);
+     }
 
-    .login-btn:hover {
-        background: #2b2bff;
-        transition: all 0.5s;
-        border-radius: 10px;
-        box-shadow: 0px 6px 15px #0000ff61;
-        padding: .5rem 2rem .5rem 1rem;
-        color: #ffffff;
-    }
-    .login-btn:hover>a{
-       color: #ffffff;  
-    }
-    .login-btn:hover::after {
-        opacity: 1;
-        transition: all 0.5s;
-        color: #ffffff;
-    }
+     .login-btn:hover {
+         background: #646464;
+         border-radius: 10px;
+         box-shadow: 0px 6px 15px #00000061;
+         padding: .5rem 2rem .5rem 1rem;
+         color: #ffffff;
+     }
 
-    .logout-btn {
-        font-family: Hack, monospace;
-        background: #d3d3d3;
-        color: #1d1d1d;
-        cursor: pointer;
-        font-size: 1em;
-        padding: .5rem;
-        border: 0;
-        transition: all 0.5s;
-        border-radius: 10px;
-        width: auto;
-        position: relative;
-        min-width: 106px;
-    }
+     .login-btn:hover>a {
+         color: #ffffff;
+     }
 
-    .logout-btn::after {
-        content: "\f2f5";
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 400;
-        position: absolute;
-        left: 80%;
-        top: 49%;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-    }
+     .login-btn:hover::after {
+         opacity: 1;
+         transition: all 0.5s;
+         color: #ffffff;
+     }
 
-    .logout-btn:hover {
-       background: #2b2bff;
-       transition: all 0.5s;
-       border-radius: 10px;
-       box-shadow: 0px 6px 15px #0000ff61;
-       padding: .5rem 2rem .5rem 1rem;
-       color: #ffffff;
-    }
-    .logout-btn:hover>a{
-       color: #ffffff;  
-    }
-    .logout-btn:hover::after {
-        opacity: 1;
-        transition: all 0.5s;
-        color: #ffffff;
-    }
+     .logout-btn {
+         font-family: Hack, monospace;
+         background: #d3d3d3;
+         color: #1d1d1d;
+         cursor: pointer;
+         font-size: 1em;
+         padding: .5rem;
+         border: 0;
+         transition: all 0.5s;
+         border-radius: 10px;
+         width: auto;
+         position: relative;
+         min-width: 106px;
+     }
 
-    .login-btn >a{
-       color: #1d1d1d;
-    }
-    .login-btn >a:hover{
-       color: #fff;
-       text-decoration: none;
-    }
-    .logout-btn >a{
-       color: #1d1d1d;
-    }
-    .logout-btn >a:hover{
-       color: #fff;
-       text-decoration: none;
-    }
+     .logout-btn::after {
+         content: "\f2f5";
+         font-family: "Font Awesome 5 Pro";
+         font-weight: 400;
+         position: absolute;
+         left: 80%;
+         top: 49%;
+         right: 0;
+         bottom: 0;
+         opacity: 0;
+         transform: translate(-50%, -50%);
+     }
+
+     .logout-btn:hover {
+         background: #2b2bff;
+         transition: all 0.5s;
+         border-radius: 10px;
+         box-shadow: 0px 6px 15px #0000ff61;
+         padding: .5rem 2rem .5rem 1rem;
+         color: #ffffff;
+     }
+
+     .logout-btn:hover>a {
+         color: #ffffff;
+     }
+
+     .logout-btn:hover::after {
+         opacity: 1;
+         transition: all 0.5s;
+         color: #ffffff;
+     }
+
+     .login-btn>a {
+         color: #fff;
+
+     }
+
+     .login-btn>a:hover {
+         text-decoration: none;
+     }
+
+     .logout-btn>a {
+         color: #1d1d1d;
+     }
+
+     .logout-btn>a:hover {
+         color: #fff;
+         text-decoration: none;
+     }
+
      /* Pre Loader */
+     .Travel-item {
+         margin: 80px 0;
+     }
+
      .Travel-item>a {
-        border: 1px solid rgb(93, 170, 221);
-         /* margin: 20px; */
+         border: 1px solid rgb(93, 170, 221);
          width: 159px;
          color: rgb(93, 170, 221);
          text-decoration: none;
          border-radius: 10px;
-         margin-top: 50px;
      }
-   
+
      .Travel-item>a:hover {
          color: #fff;
          border: 1px solid rgb(93, 170, 221);
@@ -174,37 +209,67 @@
      .Travel-item>a>div>svg {
          font-size: 22px;
          margin-right: 15px;
-         color:  rgb(93, 170, 221);
+         color: rgb(93, 170, 221);
 
      }
-     .Travel-item>a>div:hover>svg{
+
+     .Travel-item>a>div:hover>svg {
          color: #fff;
      }
+
      .card-body>h2 {
          height: 90px;
+     }
+
+     .Card-hover:hover {
+         opacity: 0.9;
      }
 
      /*end card */
      .S-1 {
          background-color: #c9f2e3;
          width: 100%;
-         height: 350px;
-         margin-bottom: 150px;
-         margin-top: 80px;
+         height: 500px;
+
          border-radius: 10px;
+         position: relative;
+         z-index: 0;
      }
 
-     .S-1>img {
-         margin-top: -158px;
+     .im-1 {
+         margin-top: -180px;
+         width: 23%;
+         position: absolute;
+         right: 0;
+         bottom: 0;
+     }
+
+     .im-2 {
+         width: 29%;
+         position: absolute;
+         z-index: 2;
+         left: 36%;
+         top: 0;
+         margin-top: 3rem;
+     }
+
+     .I-1 {
+         margin: 5rem;
+
      }
 
      .S-1>h1 {
          text-align: center;
          padding-top: 99px;
+         position: relative;
+         z-index: 3;
+
      }
 
      .S-1>div>input {
          border-radius: 10px;
+         position: relative;
+         z-index: 3;
      }
 
      .p-4 {
@@ -212,9 +277,12 @@
          height: 100%;
      }
 
-     /* .T-1 {
-         margin-bottom: 100px;
-     } */
+     .T-1 {
+
+         margin: 150px auto !important;
+         width: 80%;
+     }
+
      .T-1>div {
          flex-basis: 50%;
      }
@@ -243,9 +311,15 @@
          padding: 0 auto;
      }
 
+     .C-1 {
+         margin-top: 150px;
+     }
+
      .B-1 {
+         width: 30% !important;
+         margin: 0 auto;
          height: 46px;
-         width: 126px;
+         /* width: 126px; */
          color: #fff;
          background: #000;
          border: none;
@@ -271,6 +345,9 @@
          z-index: 0;
          /* padding-top: auto 0; */
      }
+     .dark-mode .Br{
+        background-color: white;
+     }
 
      .T-3 {
          text-align: center;
@@ -283,14 +360,21 @@
          font-weight: bold;
          z-index: 1;
      }
+     .dark-mode .T-3 {
+        background: #121212;
+        color: white;
+    }
 
-     .Card-hover:hover {
-         opacity: 0.9;
-     }
 
      /*footer*/
      .footer {
          height: auto;
+         margin-top: 100px;
+         background-color: #212529;
+     }
+
+     .C-2 {
+         margin: 100px 0;
      }
 
      .under-line {
@@ -299,12 +383,14 @@
          margin: 0 auto;
          border-radius: 2px;
      }
-     .btnColor{
+
+     .btnColor {
          background: #2a4b76 !important;
          color: #fff !important;
      }
-     .btnColor:hover{
-         
+
+     .btnColor:hover {
+
          color: #f9aa33 !important;
      }
 
@@ -317,6 +403,7 @@
          color: #54b4ff;
          transition: 1.2s ease-in-out;
      }
+
 
      /*end footer*/
      @media only screen and (max-width: 320px) {
@@ -365,16 +452,15 @@
          }
      }
 
-     
+
 
 
      @media only screen and (min-width: 426px) and (max-width: 768px) {
          nav>form>button {
              margin-top: 5px;
          }
-         .c_img{
-            
-         }
+
+
      }
 
      @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -388,185 +474,84 @@
      }
 
      @media only screen and (min-width: 1025px) and (max-width: 1440px) {}
+
      @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
-body {
-  font-family: Karla;
-}
+     body {
+         font-family: Karla;
+     }
 
-.content {
-  max-width: 1280px;
-  overflow-x: hidden;
-  margin: 0 auto;
-}
+     .content {
+         max-width: 1280px;
+         overflow-x: hidden;
+         margin: 0 auto;
+     }
 
-.card {
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column;
-  max-width: 22rem;
-  position: relative;
-  border: 1px solid #ccc;
-}
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.card-header span {
-  color: #2d3748;
-  font-size: .75rem;
-}
-.card-header>h2 {
-    font-size: 1.5rem;
-}
-.card-image {
-  width: 100%;
-  height: 14rem;
-  max-width: 100%;
-  object-fit: cover;
-}
 
-.card button {
-  display: inline-block;
-  background-color: #2a4b76;
-  color: #fff;
-  border: none;
-  padding: 1.5em 1.6em;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  transition: background-color 0.5s ease-out;
-}
 
-.card button:focus {
-  outline: none;
-}
+     .btn {
+         width: 180px;
+         height: 60px;
+         cursor: pointer;
+         background: transparent;
+         border: 1px solid #91C9FF;
+         outline: none;
+         transition: 1s ease-in-out;
+     }
 
-.card button:hover {
-  background-color: #355a8b;
-  
-}
+     .btn:hover {
+         transition: 1s ease-in-out;
+         background: #4F95DA;
+     }
 
-.text-infoo {
-  padding: .5rem 1rem;
-  margin-bottom: 2.5rem;
-  min-height: 240px;
-}
-.text-infoo>ul {
-    padding-left: 0;
-    padding-right: 1rem;
-    list-style: none;
-    color:olivedrab;
-}
-.text-infoo>ul>li::before {
-    content: "\2022";  
-    color: sandybrown; 
-    font-weight: bold; 
-    display: inline-block; 
-    width: 1em; 
-    margin-left: 0em; 
-}
-.text-infoo>p {
-    padding-top: .5rem;
-    font-size: 1.5rem;
-    margin-bottom: .5rem;
-    color:navy;
-}
-.controls {
-  display: flex;
-  justify-content: end;
-  margin-bottom: 1.5rem;
-}
+     .btn:hover svg {
+         stroke-dashoffset: -480;
+     }
 
-.controls button {
-  width: 40px;
-  height: 40px;
-  border: 0;
-  background-color: #f9aa33;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.5s ease-out;
-}
+     .btn span {
+         color: white;
+         font-size: 18px;
+         font-weight: 100;
+     }
 
-.controls button:hover {
-  background-color: #ec8e00;
-}
+     /* ----------------button---------------------------- */
+     .btn {
+         width: 180px;
+         height: 40px;
+         cursor: pointer;
+         background: transparent;
+         border: 1px solid #91C9FF;
+         outline: none;
+         transition: 1s ease-in-out;
+     }
 
-.controls button:nth-child(1) {
-  margin-right: 2rem;
-}
-.btn {
-  width: 180px;
-  height: 60px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
-  outline: none;
-  transition: 1s ease-in-out;
-}
+     .btn svg {
+         position: absolute;
+         left: 0;
+         top: 0;
+         fill: none;
+         stroke: #fff;
+         stroke-dasharray: 150 480;
+         stroke-dashoffset: 150;
+         transition: 1s ease-in-out;
+     }
 
-.btn:hover {
-  transition: 1s ease-in-out;
-  background: #4F95DA;
-}
+     .btn:hover {
+         transition: 1s ease-in-out;
+         background: #4F95DA;
 
-.btn:hover svg {
-  stroke-dashoffset: -480;
-}
+     }
 
-.btn span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
-}
- /* ----------------button---------------------------- */
- .btn {
-    width: 180px;
-    height: 40px;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #91C9FF;
-    outline: none;
-    transition: 1s ease-in-out;
-  }
-  
-  .btn svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }
-  
-  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #4F95DA;
-    
-  }
-  
-  .btn:hover svg {
-    stroke-dashoffset: -480;
-  }
-  
-  .btn span {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 100;
-    position: relative;
-    top: -15px;
-  }
-  /* ------------------footerBtn------------------------- */
-  .Sliderstyle{
-    width:320px !important;
-  }
+     .btn:hover svg {
+         stroke-dashoffset: -480;
+     }
+
+     .btn span {
+         color: #fff;
+         font-size: 18px;
+         font-weight: 100;
+         position: relative;
+         top: -15px;
+     }

@@ -46,7 +46,7 @@ class HomePage extends Component {
         //     1024: { items: 3 },
         // };
         return (
-            <div className="container1 mb-5">
+            <div className="container1 ">
                     <div className="row">
                         <ProductList products={this.state.products} />
                     </div>
