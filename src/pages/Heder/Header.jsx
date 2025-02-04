@@ -49,7 +49,7 @@ const Header = () => {
         <nav className="navbar Nv">
 
             {user ? (
-                <button className="me-2 login-header-btn" type="button" onClick={handleLogout}>
+                <button className="me-2 logOut-header-btn" type="button" onClick={handleLogout}>
                     خروج
                 </button>
             ) : (

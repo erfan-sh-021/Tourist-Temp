@@ -3,16 +3,23 @@ import { useNavigate } from "react-router-dom";
 import { signUp } from "../service/authService";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../pages/firebase";
+import { Button, Form, Col, Container, Row } from "react-bootstrap";
+import './signup.css'
 
 const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const handleSignUp = async (e) => {
         e.preventDefault();
         setError(null);
+        if (password !== confirmPassword) {
+            setError("رمز عبور و تکرار رمز عبور باید یکی باشند.");
+            return;
+        }
         try {
             // سعی کن ثبت‌نام انجام بده
             await signUp(email, password);
@@ -29,14 +36,58 @@ const SignUp = () => {
     };
 
     return (
-        <div>
-            <h2>ثبت‌نام</h2>
-            {error && <p style={{ color: "red" }}>{error}</p>} {/* نمایش خطا */}
-            <form onSubmit={handleSignUp}>
-                <input type="email" placeholder="ایمیل" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                <input type="password" placeholder="رمز عبور" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                <button type="submit">ثبت‌نام</button>
-            </form>
+        <div className="login-container ">
+            <div className="login-box" dir="rtl">
+                <h2 className="login-title">ثبت‌نام</h2>
+                {error && <p style={{ color: "red" }}>{error}</p>} {/* نمایش خطا */}
+                <Container>
+                    <Row className="justify-content-md-center mt-5">
+                        <Col xs={12} md={12}>
+                            <Form onSubmit={handleSignUp}>
+                                <Form.Group className="mb-3 form-group" controlId="formBasicEmail">
+                                    <Form.Label>ایمیل</Form.Label>
+                                    <Form.Control
+                                        type="email"
+                                        placeholder="ایمیل را وارد کنید"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)} required
+                                        className="form-control"
+                                    />
+                                </Form.Group>
+
+                                <Form.Group className="mb-3 form-group" controlId="formBasicPassword">
+                                    <Form.Label>رمز ورود</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        placeholder="رمز عبور را وارد کنید"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)} required
+                                        className="form-control"
+                                    />
+                                </Form.Group>
+                                <Form.Group className="mb-3 form-group" controlId="formConfirmPassword">
+                                    <Form.Label>تکرار رمز ورود</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        placeholder="تکرار پسورد را وارد کنید"
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)} required
+                                        className="form-control"
+                                    />
+                                </Form.Group>
+
+                                <Button type="submit" className="login-btn">
+                                    ثبت‌نام
+                                </Button>
+                            </Form>
+                            <p>
+                                <span>حساب کاربری دارید؟ </span>
+                                <a href="/login" className="signup-link">ورود</a>
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 };
