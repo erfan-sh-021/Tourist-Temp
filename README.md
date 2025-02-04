@@ -1,9 +1,7 @@
 # Tourist Website Template
 
 This project is a tourist website template built using **React**, **Bootstrap**, and **Firebase**. The template includes features such as a homepage, search section, display of tourist locations, and user registration and login functionality.
-This is a sample project description.
 
-![Screenshot](./assets/2.jpg)
 
 ## Technologies Used
 - **React**: For building dynamic components and state management.
