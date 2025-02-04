@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { useSpring, animated } from '@react-spring/web';
 import { Sun, Moon } from 'react-feather';
 import { useDarkMode } from '../them/ThemeContext';
-import { auth } from '../firebase'; 
+import { auth } from '../firebase';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import './Header.css';
 
@@ -15,17 +15,15 @@ const Header = () => {
     // بررسی وضعیت کاربر هنگام لود شدن کامپوننت
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log('current user : ' , currentUser)
             setUser(currentUser);
         });
-        return () => unsubscribe(); // جلوگیری از لیک مموری
+        return () => unsubscribe();
     }, []);
 
-    // تابع خروج از حساب
     const handleLogout = async () => {
         try {
             await signOut(auth);
-            navigate('/');
+            navigate("/", { state: { showLogoutModal: true } }); // ✅ ارسال state برای نمایش مودال خروج
         } catch (error) {
             console.error("Error logging out:", error);
         }
@@ -49,7 +47,7 @@ const Header = () => {
 
     return (
         <nav className="navbar Nv">
-         
+
             {user ? (
                 <button className="me-2 login-header-btn" type="button" onClick={handleLogout}>
                     خروج
@@ -59,7 +57,7 @@ const Header = () => {
                     ورود
                 </button>
             )}
-            
+
             <ul>
                 <li>مشاهدات</li>
                 <li>سفرها</li>

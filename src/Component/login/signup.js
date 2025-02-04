@@ -1,51 +1,43 @@
-import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import {  useNavigate } from 'react-router';
-import './signup.css'; 
-const SignUp = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const navigation = useNavigate();
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { signUp } from "../service/authService";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../pages/firebase";
 
-    const handleSignUp = async(e) =>{
+const SignUp = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState(null);
+    const navigate = useNavigate();
+
+    const handleSignUp = async (e) => {
         e.preventDefault();
         setError(null);
-        try{
-            const user = await signUp(email,password);
-            console.log('User signed up : ' , user)
-            navigation('/');
-        }catch(error){
-            alert(error.massege);
+        try {
+            // سعی کن ثبت‌نام انجام بده
+            await signUp(email, password);
+            await signInWithEmailAndPassword(auth, email, password); // لاگین خودکار بعد از ثبت‌نام
+            navigate("/"); // به صفحه اصلی هدایت شود
+        } catch (error) {
+            if (error.code === "auth/email-already-in-use") {
+                setError("این ایمیل قبلاً ثبت شده است. لطفاً وارد شوید.");
+                setTimeout(() => navigate("/login"), 2000); // بعد از ۲ ثانیه هدایت به صفحه ورود
+            } else {
+                setError(error.message);
+            }
         }
     };
+
     return (
-        <Container dir="rtl" className="signup-container">
-        {error &&
-            <form className="signup-form">
-                <h3 className="signup-title">ثبت نام</h3>
-                <div className="mb-3">
-                    <label>ایمیل</label>
-                    <input type="email" className="form-control" placeholder="ایمیل" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                </div>
-                <div className="mb-3">
-                    <label>رمز عبور</label>
-                    <input type="password" className="form-control" placeholder="رمز عبور"   value={password} onChange={(e) => setPassword(e.target.value)}/>
-                </div>
-
-                <div className="d-grid">
-                    <button type="submit" className="btn btn-primary signup-btn">
-                        ثبت نام
-                    </button>
-                </div>
-
-                <p className="forgot-password text-center">
-                    آیا قبلاً ثبت‌نام کرده‌اید؟{' '}
-                    <span  className="signup-link" onClick={()=>navigation('/Login')}>ورود</span>
-                </p>
+        <div>
+            <h2>ثبت‌نام</h2>
+            {error && <p style={{ color: "red" }}>{error}</p>} {/* نمایش خطا */}
+            <form onSubmit={handleSignUp}>
+                <input type="email" placeholder="ایمیل" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <input type="password" placeholder="رمز عبور" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <button type="submit">ثبت‌نام</button>
             </form>
-            }
-        </Container>
+        </div>
     );
 };
 
