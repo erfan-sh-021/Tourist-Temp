@@ -10,7 +10,8 @@ import './Header.css';
 const Header = () => {
     const navigate = useNavigate();
     const { darkMode, toggleDarkMode } = useDarkMode();
-    const [user, setUser] = useState(null); // ذخیره وضعیت کاربر
+    const [user, setUser] = useState(null); 
+    const [isScrolled, setIsScrolled] = useState(false);
 
     // بررسی وضعیت کاربر هنگام لود شدن کامپوننت
     useEffect(() => {
@@ -44,9 +45,21 @@ const Header = () => {
         }
         localStorage.setItem('darkMode', darkMode);
     }, [darkMode]);
+    useEffect(()=>{
+        const handleScroll = () =>{
+            if(window.scrollY>0){
+                setIsScrolled(true);
+            }else{
+                setIsScrolled(false);
+            }
+        
+        };
+        window.addEventListener('scroll',handleScroll);
+        return () => window.removeEventListener('scroll' , handleScroll);
+    },[])
 
     return (
-        <nav className="navbar Nv">
+        <nav className={`navbar Nv ${isScrolled ? 'scrolled' : ''}`}>
 
             {user ? (
                 <button className="me-2 logOut-header-btn" type="button" onClick={handleLogout}>

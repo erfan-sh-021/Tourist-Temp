@@ -15,8 +15,6 @@ import Layout from './Component/layout/layout';
 import Login from './Component/login/login';
 import SignUp from './Component/login/signup';
 import { useEffect, useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
-
 
 
 function AppContent() {

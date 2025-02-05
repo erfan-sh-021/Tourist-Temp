@@ -4,9 +4,25 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    transition: border-bottom 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: none;
+}
+
+.navbar.scrolled {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.dark-mode .navbar.scrolled {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.507);
+}
+
+.dark-mode .navbar {
+    background-color: #222;
 }
 
 
@@ -109,13 +125,6 @@ body.dark-mode {
 }
 
 /* تغییر رنگ هدر در حالت دارک */
-.navbar {
-    background-color: #f8f9fa;
-}
-
-.dark-mode .navbar {
-    background-color: #222;
-}
 
 /* تغییر رنگ لینک‌ها */
 .navbar ul li {

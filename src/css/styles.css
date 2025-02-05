@@ -12,12 +12,9 @@
          box-sizing: border-box;
          font-family: myFont;
      }
+ 
 
-     .Nv {
-         /* background-color: #464b4e; */
-         border-bottom: 1px solid #e0e0e0;
 
-     }
 
      .Nv>ul {
          display: flex;
@@ -167,7 +164,7 @@
 
      /* Pre Loader */
      .Travel-item {
-         margin: 80px 0;
+         margin: 140px 0 80px 0;
      }
 
      .Travel-item>a {
