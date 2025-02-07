@@ -1,0 +1,40 @@
+{
+    "alldata": {
+        "hotel": [
+            {
+                "imageSrc": "https://cdn.iranhotelonline.com/Content/Images/Gallery/90205.webp",
+                "title": "هتل مرمر کرج",
+                "description": "امکانات هتل",
+                "pricingText": "285,000تومان/ روزانه",
+                "features": [
+                    "وای فای",
+                    "صبحانه"
+                ]
+            },
+            {
+                "imageSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.egardesh.com%2Fhotel%2F%25D9%2587%25D8%25AA%25D9%2584-%25D8%25A7%25D9%2585%25DB%258C%25D8%25B1-%25DA%25A9%25D8%25A8%25DB%258C%25D8%25B1-%25DA%25A9%25D8%25B1%25D8%25AC&psig=AOvVaw38elhiFtsQbhDJPwPo2BDp&ust=1738879275881000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPD9jqDErYsDFQAAAAAdAAAAABAE",
+                "title": "هتل امیر کبیر کرج",
+                "description": "امکانات هتل",
+                "pricingText": "285,000تومان/ روزانه",
+                "features": [
+                    "وای فای",
+                    "صبحانه"
+                ]
+            }
+        ],
+        "products": [
+            {
+                "id": 1,
+                "title": "غار یخ مراد",
+                "imageSrc": "https://hotelyar.com/pic/1889/6eb8bd14-232a-45d9-ad53-8d4d174469d5.jpg",
+                "desc": "در بخشی از غار ۴ طبقه با اختلاف ارتفاع بیش از ۳۰ متر دیده می ‌شوند..."
+            },
+            {
+                "id": 2,
+                "title": "پل دختر",
+                "imageSrc": "https://hotelyar.com/pic/1889/6eb8bd14-232a-45d9-ad53-8d4d174469d5.jpg",
+                "desc": "یکی از معروف ترین جاذبه های شهر کرج پل دختر است..."
+            }
+        ]
+    }
+}
