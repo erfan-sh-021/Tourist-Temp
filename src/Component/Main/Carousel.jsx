@@ -1,7 +1,7 @@
 import Slider from 'react-slick'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import React, { useState, useEffect } from 'react';
-import { getDataFromFirebase } from '../../pages/firebase';
+import { getDataFromFirebase } from '../service/firebase';
 import '../../css/slider.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -29,7 +29,7 @@ export default function Carousel() {
       { breakpoint: 430, settings: { slidesToShow: 1 } },
     ],
   };
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -41,7 +41,7 @@ export default function Carousel() {
         setLoading(false);
       }
     };
-  
+
     fetchData();
   }, []);
 

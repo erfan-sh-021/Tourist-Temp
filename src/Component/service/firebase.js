@@ -1,6 +1,7 @@
 import {initializeApp} from 'firebase/app' ;
 import {getAuth} from 'firebase/auth'; 
 import {getDatabase , ref , get} from 'firebase/database';
+import { getFirestore } from 'firebase/firestore';
 const firebaseConfig = {
     apiKey: "AIzaSyBvcDGRYuqyh3mRQ7Yb5z6kz8fd8LqEgWM",
     authDomain: "gardeshgary-a752b.firebaseapp.com",
@@ -28,7 +29,7 @@ const getDataFromFirebase = async () =>{
         console.error("Error reading data from Firebase:", error);
     }
 }
-
+export const dc = getFirestore(app);
 export const auth = getAuth(app); 
 export default app;
 export {getDataFromFirebase};

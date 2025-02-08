@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../service/authService';
 import './login.css';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import {auth} from '../../pages/firebase';
+import { auth } from '../service/firebase';
 
 
 function Login() {
@@ -16,12 +16,12 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-        await signInWithEmailAndPassword(auth, email, password);
-        navigate("/", { state: { showLoginModal: true } }); // ✅ ارسال state برای نمایش مودال ورود
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/", { state: { showLoginModal: true } }); // ✅ ارسال state برای نمایش مودال ورود
     } catch (err) {
-        setError("ایمیل یا رمز عبور اشتباه است.");
+      setError("ایمیل یا رمز عبور اشتباه است.");
     }
-};
+  };
 
   return (
     <Container className="login-container" dir='rtl'>

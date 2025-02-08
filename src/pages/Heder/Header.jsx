@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router';
 import { useSpring, animated } from '@react-spring/web';
 import { Sun, Moon } from 'react-feather';
 import { useDarkMode } from '../them/ThemeContext';
-import { auth } from '../firebase';
+import { auth } from '../../Component/service/firebase';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import './Header.css';
 
 const Header = () => {
     const navigate = useNavigate();
     const { darkMode, toggleDarkMode } = useDarkMode();
-    const [user, setUser] = useState(null); 
+    const [user, setUser] = useState(null);
     const [isScrolled, setIsScrolled] = useState(false);
 
     // بررسی وضعیت کاربر هنگام لود شدن کامپوننت
@@ -45,18 +45,18 @@ const Header = () => {
         }
         localStorage.setItem('darkMode', darkMode);
     }, [darkMode]);
-    useEffect(()=>{
-        const handleScroll = () =>{
-            if(window.scrollY>0){
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
                 setIsScrolled(true);
-            }else{
+            } else {
                 setIsScrolled(false);
             }
-        
+
         };
-        window.addEventListener('scroll',handleScroll);
-        return () => window.removeEventListener('scroll' , handleScroll);
-    },[])
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
 
     return (
         <nav className={`navbar Nv ${isScrolled ? 'scrolled' : ''}`}>
