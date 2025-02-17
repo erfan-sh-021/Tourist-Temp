@@ -3,4 +3,5 @@ path:hover, polygon:hover {
 }
 .iran-map-wrapper   {
   fill: #9790ee !important; /* تغییر رنگ نوشته‌ها به سفید */
+  margin-top: 40px;
 }

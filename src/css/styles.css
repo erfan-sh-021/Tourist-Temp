@@ -299,17 +299,17 @@
          border-radius: 0 10px 10px 0;
      }
 
-     .T-2 {
-         background-color: #ff5d5d;
-     }
+     
 
      .T-2>h1 {
          font-size: 32px;
      }
 
      .T-2>h4 {
-         font-size: 25px;
+         font-size: 20px;
          padding: 0 auto;
+         color:#0021c3;
+         text-align: center;
      }
 
      .C-1 {
@@ -558,3 +558,10 @@
          position: relative;
          top: -15px;
      }
+     .animation{
+        width: 60% !important;
+        margin: 0 auto;
+     }
+     /* .animation>div>svg{
+        padding: 0;
+     } */

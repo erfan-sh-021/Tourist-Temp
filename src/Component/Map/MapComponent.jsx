@@ -11,7 +11,7 @@ function Map() {
     <div style={{ fontFamily: 'vazir' }}>
       <IranMap
         data={mapData}
-        width={450}
+        width={500}
         textColor="white"
         defaultSelectedProvince='tehran'
         selectedProvinceColor='#b0da3d'

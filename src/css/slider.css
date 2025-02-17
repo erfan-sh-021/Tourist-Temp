@@ -29,6 +29,9 @@
     margin-bottom: .5rem;
     color: navy;
 }
+.dark-mode .text-infoo>p{
+  color: #9790ee;
+}
 .controls {
     display: flex;
     justify-content: end;
