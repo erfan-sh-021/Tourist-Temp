@@ -1,5 +1,5 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from "./firebase"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { auth } from "./firebaseRealTime"
 
 // تابع ثبت‌نام کاربر
 export const signUp = async (email, password) => {

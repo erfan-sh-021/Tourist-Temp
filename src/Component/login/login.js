@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { login } from '../service/authService';
 import './login.css';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../service/firebase';
+import { auth } from '../service/firebaseRealTime';
 
 
 function Login() {

@@ -1,7 +1,7 @@
 import Slider from 'react-slick'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import React, { useState, useEffect } from 'react';
-import { getDataFromFirebase } from '../service/firebase';
+import { getDataFromFirebase } from '../service/firebaseRealTime';
 import '../../css/slider.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -53,7 +53,7 @@ export default function Carousel() {
     <div className="C-1 container-fluid">
       <Slider ref={setSliderRef} {...sliderSettings}>
         {hotelCards.map((card, index) => (
-          <div key={index} className="card Sliderstyle">
+          <div key={index} className="slider-card Sliderstyle">
             <img src={card.imageSrc} alt={card.title} className="card-image" />
             <div className="text-infoo" dir="rtl">
               <div className="card-header c_header">

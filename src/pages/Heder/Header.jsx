@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { useSpring, animated } from '@react-spring/web';
 import { Sun, Moon } from 'react-feather';
 import { useDarkMode } from '../them/ThemeContext';
-import { auth } from '../../Component/service/firebase';
+import { auth } from '../../Component/service/firebaseRealTime';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import './Header.css';
 

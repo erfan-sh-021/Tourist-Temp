@@ -5,18 +5,22 @@ import 'bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css';
 import MainTittle from './Component/Main/MainTittle';
 import MainSearch from './Component/Main/MainSearch';
 import MainTravel from './Component/Main/MainTravel';
-import HomePage from './Component/Main/pages/Home';
 import Carousel from './Component/Main/Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 import Detail from './Component/Details/Detail';
 import Layout from './Component/layout/layout';
 import Login from './Component/login/login';
 import SignUp from './Component/login/signup';
 import { useEffect, useState } from 'react';
+import HCard from './Component/HCards/HCard';
+import MapComponent from './Component/Map/MapComponent';
 
-
+const ProvinceDetail= ({province}) => {
+    const {provinceName} = useParams();
+    return <h2>مکان های گردشگری استان </h2>
+}
 function AppContent() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -40,6 +44,7 @@ function AppContent() {
         }
     }, [location.state]);
 
+
     return (
         <>
             <div>
@@ -54,11 +59,11 @@ function AppContent() {
                             <>
                                 <MainTittle />
                                 <MainSearch />
-                                <HomePage />
+                                <HCard />
                                 <MainTravel />
                                 <div className="Tittle">
                                     <hr className="Br" />
-                                    <span className="T-3">اماکن گردشگری</span>
+                                    <span className="T-3">هتل ها</span>
                                 </div>
                                 <Carousel />
                             </>
@@ -67,6 +72,9 @@ function AppContent() {
                     { path: '/detail/:id', element: <Detail /> },
                     { path: '/login', element: <Login /> },
                     { path: '/signUp', element: <SignUp /> },
+                    { path: '/province/:provinceName', element: <provinceDetail/> },
+                    { path: '/map', element: <MapComponent/> },
+                    
                 ].map(({ path, element }) => (
                     <Route key={path} path={path} element={<Layout>{element}</Layout>} />
                 ))}

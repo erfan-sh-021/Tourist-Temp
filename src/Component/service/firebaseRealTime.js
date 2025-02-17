@@ -1,7 +1,6 @@
 import {initializeApp} from 'firebase/app' ;
 import {getAuth} from 'firebase/auth'; 
 import {getDatabase , ref , get} from 'firebase/database';
-import { getFirestore } from 'firebase/firestore';
 const firebaseConfig = {
     apiKey: "AIzaSyBvcDGRYuqyh3mRQ7Yb5z6kz8fd8LqEgWM",
     authDomain: "gardeshgary-a752b.firebaseapp.com",
@@ -12,14 +11,13 @@ const firebaseConfig = {
 }
 const app = initializeApp(firebaseConfig);
 
-const getDataFromFirebase = async () =>{
+export const getDataFromFirebase = async () =>{
     const db = getDatabase();
     const dataRef = ref(db , 'hotel');
     
     try{
         const snapshot = await get(dataRef);
         if(snapshot.exists()){
-            console.log(snapshot.val());
             return snapshot.val();
         }else{
             console.log('no data available');
@@ -29,8 +27,7 @@ const getDataFromFirebase = async () =>{
         console.error("Error reading data from Firebase:", error);
     }
 }
-export const dc = getFirestore(app);
 export const auth = getAuth(app); 
 export default app;
-export {getDataFromFirebase};
+
  

@@ -1,0 +1,22 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": { "name": "Tehran" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[51.056, 35.696], [51.487, 35.696], [51.487, 35.834], [51.056, 35.834], [51.056, 35.696]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "name": "Esfahan" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[51.600, 32.600], [52.100, 32.600], [52.100, 33.000], [51.600, 33.000], [51.600, 32.600]]]
+        }
+      }
+    ]
+  }
+  
