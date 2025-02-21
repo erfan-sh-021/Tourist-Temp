@@ -37,7 +37,7 @@ function HSlider({ products }) {
         <div className="col-md-7 p-3">
           <div className="card-body">
             <h4 className="card-title">{products[activeIndex]?.title}</h4>
-            <p className="card-text">{products[activeIndex]?.desc}</p>
+            <p className="card-text">{products[activeIndex]?.description}</p>
             <a href="#" className="btn btn-primary h-btn">اطلاعات بیشتر</a>
           </div>
         </div>
@@ -62,7 +62,7 @@ function HSlider({ products }) {
             <div className="carousel-inner">
               {products.map((product, index) => (
                 <div key={index} className={`carousel-item ${activeIndex === index ? 'active' : ''}`}>
-                  <img src={product.pic} className="d-block w-100 img-fluid" alt={product.title} />
+                  <img src={product.picture} className="d-block w-100 img-fluid" alt={product.title} />
                 </div>
               ))}
             </div>

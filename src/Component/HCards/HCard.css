@@ -65,5 +65,13 @@
     font-size: 12px;
   }
   .HCard{
-    height: 12rem;
+    height: 14rem;
+  }
+  .card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* فقط ۳ خط نمایش داده شود */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* اضافه کردن ... در انتها */
+    text-align: justify;
   }

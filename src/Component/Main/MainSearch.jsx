@@ -1,6 +1,16 @@
+import { useNavigate } from "react-router";
 import nature from "../../img/nature5.png";
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
+
 const MainSearch = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    if (searchTerm.trim()) {
+      navigate(`/province/${searchTerm.trim()}`);
+    }
+  };
   return (
     <>
       <div className="S-1 ">
@@ -12,6 +22,8 @@ const MainSearch = () => {
             type="search "
             aria-label="search "
             placeholder=" ... نام شهر مورد نظر خود را وارد کنید"
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           />
         </div>
         <img
