@@ -9,18 +9,17 @@ import Carousel from './Component/Main/Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
-import Detail from './Component/Details/Detail';
 import Layout from './Component/layout/layout';
 import Login from './Component/login/login';
 import SignUp from './Component/login/signup';
 import { useEffect, useState } from 'react';
 import HCard from './Component/HCards/HCard';
 import MapComponent from './Component/Map/MapComponent';
-
-const ProvinceDetail= ({province}) => {
-    const {provinceName} = useParams();
-    return <h2>مکان های گردشگری استان </h2>
-}
+import ProvinceDetail from './Component/province/province.jsx';
+// const ProvinceDetail= ({province}) => {
+//     const {provinceName} = useParams();
+//     return <h2>مکان های گردشگری استان </h2>
+// }
 function AppContent() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -40,7 +39,7 @@ function AppContent() {
             setTimeout(() => {
                 setModalMessage('');
                 navigate(location.pathname, { replace: true, state: {} });
-            }, 3000); // پس از ۳ ثانیه مودال بسته شود
+            }, 3000);
         }
     }, [location.state]);
 
@@ -69,10 +68,9 @@ function AppContent() {
                             </>
                         ),
                     },
-                    { path: '/detail/:id', element: <Detail /> },
                     { path: '/login', element: <Login /> },
                     { path: '/signUp', element: <SignUp /> },
-                    { path: '/province/:provinceName', element: <provinceDetail/> },
+                    { path: '/province/:provinceName', element: <ProvinceDetail/> },
                     { path: '/map', element: <MapComponent/> },
                     
                 ].map(({ path, element }) => (

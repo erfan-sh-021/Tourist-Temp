@@ -1,0 +1,23 @@
+.PrivStyel{
+    margin: 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PrivStyel>h3{
+    text-align: center;
+    font-weight: bold;
+}
+.PrivStyel>img{
+    border-radius: 7px;
+    width: 40%;
+    margin: 70px 0;
+}
+.PrivStyel>p{
+    margin: 70px 0;
+    width: 40%;
+    text-align:  justify;
+    direction: rtl;
+    font-size: 20px;
+ 
+}
