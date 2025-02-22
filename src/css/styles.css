@@ -305,13 +305,11 @@
          font-size: 32px;
      }
 
-     .T-2>h4 .dark-mode{
-        color:#77b2fb !important;
-     }
+
      .T-2>h4 {
          font-size: 20px;
          padding: 0 auto;
-         color:#d39f0d;
+         color:#3c8cbb;
          text-align: center;
      }
 

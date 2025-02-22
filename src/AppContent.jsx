@@ -62,7 +62,7 @@ function AppContent() {
                                 <MainTravel />
                                 <div className="Tittle">
                                     <hr className="Br" />
-                                    <span className="T-3">هتل ها</span>
+                                    <span className="T-3">هتل های تخفیف خورده</span>
                                 </div>
                                 <Carousel />
                             </>
